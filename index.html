@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Интернет-магазин</h1>
+        <button id="loginButton">Войти</button>
+    </header>
+    <main>
+        <section class="filters">
+            <select id="categoryFilter">
+                <option value="">Все категории</option>
+            </select>
+        </section>
+        <section id="productList" class="products"></section>
+        <button id="loadMore">Загрузить ещё</button>
+    </main>
+    <aside>
+        <h2>Добавить товар</h2>
+        <form id="addProductForm">
+            <input type="text" id="productName" placeholder="Название" required>
+            <input type="number" id="productPrice" placeholder="Цена" required>
+            <textarea id="productDescription" placeholder="Описание" required></textarea>
+            <input type="text" id="productCategory" placeholder="Категория" required>
+            <button type="submit">Добавить товар</button>
+        </form>
+    </aside>
+
+    <!-- Modal for Login/Registration -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <form id="authForm">
+                <input type="text" id="username" placeholder="Логин" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+                <p id="authError" style="color: red; display: none;"></p>
+            </form>
+            <p>или <a href="#" id="showRegister">зарегистрируйтесь</a></p>
+            <form id="registerForm" style="display: none;">
+                <h2>Регистрация</h2>
+                <input type="text" id="registerUsername" placeholder="Логин" required>
+                <input type="password" id="registerPassword" placeholder="Пароль" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
